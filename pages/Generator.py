@@ -1,20 +1,23 @@
 from utils.generator import generate_tasks
 import streamlit as st
 
+
 def show_generator():
 
-    # ✅ Initialize session state once
+    # ✅ Initialize session state ONCE
     if "spec_history" not in st.session_state:
         st.session_state["spec_history"] = []
 
-def show_generator():
-    st.title("🛠️ Generate Tasks")
+    if "latest_output" not in st.session_state:
+        st.session_state["latest_output"] = ""
 
-    st.markdown(
-        "Fill in the details below to generate user stories and engineering tasks."
-    )
+    if "edited_output" not in st.session_state:
+        st.session_state["edited_output"] = ""
 
-    # for Form 
+    st.title(" Generate Tasks")
+    st.markdown("Fill in the details below to generate user stories and engineering tasks.")
+
+    # -------- FORM --------
     with st.form("feature_form"):
         feature_goal = st.text_area(
             "Feature Goal *",
@@ -38,7 +41,7 @@ def show_generator():
 
         submitted = st.form_submit_button("Generate Tasks")
 
-    
+    # -------- VALIDATION --------
     if submitted:
         errors = []
 
@@ -53,17 +56,6 @@ def show_generator():
                 st.error(error)
             return
 
-        # If validation passes
-        st.success("Input looks good! (Task generation will happen next.)")
-
-        # Temporary preview (for confidence & debugging)
-        st.subheader("Your Input Summary")
-        st.write("**Goal:**", feature_goal)
-        st.write("**Users:**", target_users)
-        st.write("**Constraints:**", constraints if constraints else "None")
-        st.write("**Template:**", template)
-        st.divider()
-
         st.info("Generating tasks...")
 
         output, error = generate_tasks(
@@ -75,24 +67,47 @@ def show_generator():
 
         if error:
             st.warning(error)
+            return
 
-        if output:
-            st.success("Tasks generated successfully!")
-            st.subheader("Generated Tasks")
-            st.markdown(output)
+        # -------- SUCCESS --------
+        st.success("Tasks generated successfully!")
+        st.subheader("Generated Tasks")
+        st.markdown(output)
 
-            # Save output
-            st.session_state["latest_output"] = output
+        # Save outputs
+        st.session_state["latest_output"] = output
+        st.session_state["edited_output"] = output
 
-            # Save to history
-            st.session_state["spec_history"].insert(0, {
-                "goal": feature_goal,
-                "users": target_users,
-                "constraints": constraints,
-                "template": template,
-                "output": output
-            })
+        # Save to history
+        st.session_state["spec_history"].insert(0, {
+            "goal": feature_goal,
+            "users": target_users,
+            "constraints": constraints,
+            "template": template,
+            "output": output
+        })
 
-            # Keep last 5
-            st.session_state["spec_history"] = st.session_state["spec_history"][:5]
+        # only last 5
+        st.session_state["spec_history"] = st.session_state["spec_history"][:5]
 
+    #EDIT SECTION 
+    if st.session_state["latest_output"]:
+        st.divider()
+        st.subheader("Edit Tasks")
+
+        edited_output = st.text_area(
+            "You can edit the generated tasks below:",
+            value=st.session_state["edited_output"],
+            height=300
+        )
+
+        st.session_state["edited_output"] = edited_output
+
+        st.subheader("Export")
+
+        st.download_button(
+            label="⬇ Download as Markdown",
+            data=edited_output,
+            file_name="tasks.md",
+            mime="text/markdown"
+        )

@@ -9,10 +9,10 @@ def generate_tasks(goal, users, constraints, template):
     # ---------- MOCK MODE ----------
     #if not api_key:
     mock_output = f"""
-### 🧑‍💻 User Stories
+###  User Stories
 - As a user, I want to {goal.lower()} so that my problem is solved.
 
-### 🛠️ Engineering Tasks
+###  Engineering Tasks
 - Clarify requirements and edge cases
 - Design UI components
 - Implement backend logic
