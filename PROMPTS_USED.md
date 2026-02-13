@@ -7,28 +7,28 @@ AI responses, API keys, and sensitive data are intentionally excluded.
 
 ---
 
-## 🧭 Project Planning
+##  Project Planning
 
 **Prompt:**
 > I have to build a mini planning tool web app in 48 hours. Help me break down the steps and prioritize features.
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 **Prompt:**
 > Suggest a clean folder structure for a Streamlit app with multiple pages and AI integration.
 
 ---
 
-## 🧠 Feature Design – Tasks Generator
+##  Feature Design – Tasks Generator
 
 **Prompt:**
 > Design a form-based web app that takes a feature idea and generates user stories and engineering tasks.
 
 ---
 
-## ✍️ Prompt Engineering (Task Generation)
+##  Prompt Engineering (Task Generation)
 
 **Prompt:**
 > Write a prompt that converts a feature goal, target users, and constraints into structured user stories and engineering tasks.
@@ -75,3 +75,4 @@ AI responses, API keys, and sensitive data are intentionally excluded.
 - All prompts were used as guidance.
 - Final code and design decisions were reviewed and implemented manually.
 - No agent-based or autonomous AI workflows were used.
+
