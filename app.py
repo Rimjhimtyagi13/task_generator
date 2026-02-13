@@ -1,4 +1,6 @@
 import streamlit as st
+st.cache_data.clear()
+st.cache_resource.clear()
 
 if "spec_history" not in st.session_state:
     st.session_state["spec_history"] = []
