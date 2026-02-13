@@ -1,14 +1,14 @@
 import streamlit as st
 
 def show_status():
-    st.title("📊 System Status")
+    st.title(" System Status")
 
     st.success("Frontend: OK")
     st.success("Backend: OK")
     st.info("LLM: Mock mode")
 
     st.divider()
-    st.subheader("🕒 Last Generated Specs")
+    st.subheader("Last Generated Specs")
 
     history = st.session_state.get("spec_history")
 

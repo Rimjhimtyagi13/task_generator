@@ -22,19 +22,4 @@ def generate_tasks(goal, users, constraints, template):
 """
     return mock_output, None# "Running in mock mode (no API key configured)."
 
-    # ---------- REAL LLM MODE ----------
-    #try:
-        #client = OpenAI(api_key=api_key)
-
-       # prompt = build_task_prompt(goal, users, constraints, template)
-
-        #response = client.chat.completions.create(
-          #  model="gpt-4o-mini",
-           # messages=[{"role": "user", "content": prompt}],
-            #temperature=0.3
-        #)#
-
-        #return response.choices[0].message.content, None
-
-    #except Exception as e:
-     #   return None, str(e)
+  

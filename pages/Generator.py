@@ -3,8 +3,6 @@ import streamlit as st
 
 
 def show_generator():
-
-    # ✅ Initialize session state ONCE
     if "spec_history" not in st.session_state:
         st.session_state["spec_history"] = []
 
