@@ -19,6 +19,8 @@ This project was built as part of a technical assignment to demonstrate my abili
 - Interests: Data Analysis, Machine Learning, AI-powered applications
 - Tools I frequently use:
   - Python
+  - Jupyter
+  - VS Code
   - Streamlit
   - Git & GitHub
   - SQL
@@ -66,6 +68,7 @@ Details about AI usage are documented separately in:
 - GitHub: https://github.com/Rimjhimtyagi13
 
 Thank you for reviewing my work!
+
 
 
 
