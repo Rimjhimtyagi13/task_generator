@@ -35,21 +35,33 @@ demonstrate product thinking, clean implementation, and sensible AI usage.
 tasks-generator/
 
 ├── app.py # Main entry point & navigation
+
 ├── pages/
+
  ├── Home.py # Home page
+ 
  ├── Generator.py # Task generation UI
+ 
  ├── Status.py # System status page
 
 ├── utils/
+
  ├── prompts.py # Prompt templates
+ 
  ├── generator.py # Task generation logic (LLM / mock)
+ 
  ├── storage.py # Session-based storage helpers
 
 ├── README.md
+
 ├── AI_NOTES.md
+
 ├── PROMPTS_USED.md
+
 ├── ABOUTME.md
+
 ├── requirements.txt
+
 ├── .env.example
 
 
@@ -69,16 +81,15 @@ pip install -r requirements.txt
 streamlit run app.py
 
 ## Known Limitations
-Task reordering and grouping are manual (via editing text)
-No persistent database (session-based storage only)
-Minimal styling (focus on functionality and clarity)
-
-These choices were intentional due to time constraints
+- Task reordering and grouping are manual (via editing text)
+- No persistent database (session-based storage only)
+- Minimal styling (focus on functionality and clarity)
 
 ## What Is Not Done (Yet)
-Authentication
-Multi-user persistence
-Advanced task management UI (drag & drop)
-Rich analytics or metrics
+- Authentication
+- Multi-user persistence
+- Advanced task management UI (drag & drop)
+- Rich analytics or metrics
+
 
 
