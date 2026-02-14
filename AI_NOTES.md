@@ -35,19 +35,6 @@ Final decisions about:
 were made manually.
 
 ---
-
-##  LLM & Provider Used
-
-- **Provider:** OpenAI  
-- **Model (planned):** `gpt-4o-mini`
-
-The model was chosen because:
-- It is cost-efficient
-- Fast for short structured outputs
-- Suitable for generating user stories and task lists
-
----
-
 ##  Mock Mode Design Choice
 
 To ensure the app:
@@ -94,3 +81,4 @@ The goal was to demonstrate:
 - Responsible AI usage
 - Understanding of system design
 - Clean and explainable implementation
+
