@@ -3,7 +3,7 @@
 Hi, I’m Rimjhim Tyagi 👋  
 I’m a Computer Science graduate with a strong interest in building practical, user-focused tools using Python, data, and AI.
 
-This project was built as part of a time-boxed technical assignment (48 hours) to demonstrate my ability to:
+This project was built as part of a technical assignment to demonstrate my ability to:
 - quickly understand product requirements,
 - design a simple but usable web application,
 - integrate AI responsibly,
@@ -64,3 +64,4 @@ Details about AI usage are documented separately in:
 - GitHub: https://github.com/Rimjhimtyagi13
 
 Thank you for reviewing my work!
+
