@@ -11,7 +11,7 @@ This project was built as part of a technical assignment to demonstrate my abili
 
 ---
 
-## You can view my resume here - https://drive.google.com/file/d/1kS13ydlzicJyuL9FtQmyEDGH1zBDZGB4/view?usp=drive_link
+## You can view my resume here - https://drive.google.com/file/d/1VCX_Q7B2ph1bFLoDw4Hd2mssT1WiMrHR/view?usp=drive_link
 
 ## Background
 
@@ -66,5 +66,6 @@ Details about AI usage are documented separately in:
 - GitHub: https://github.com/Rimjhimtyagi13
 
 Thank you for reviewing my work!
+
 
 
