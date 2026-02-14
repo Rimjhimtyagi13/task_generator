@@ -33,18 +33,18 @@ demonstrate product thinking, clean implementation, and sensible AI usage.
 ##  Project Structure
 
 tasks-generator/
-│
+
 ├── app.py # Main entry point & navigation
 ├── pages/
-│ ├── Home.py # Home page
-│ ├── Generator.py # Task generation UI
-│ ├── Status.py # System status page
-│
+ ├── Home.py # Home page
+ ├── Generator.py # Task generation UI
+ ├── Status.py # System status page
+
 ├── utils/
-│ ├── prompts.py # Prompt templates
-│ ├── generator.py # Task generation logic (LLM / mock)
-│ ├── storage.py # Session-based storage helpers
-│
+ ├── prompts.py # Prompt templates
+ ├── generator.py # Task generation logic (LLM / mock)
+ ├── storage.py # Session-based storage helpers
+
 ├── README.md
 ├── AI_NOTES.md
 ├── PROMPTS_USED.md
@@ -58,20 +58,27 @@ tasks-generator/
 ##  How to Run Locally
 
 ### 1️ Clone the repository
-```bash
+
 git clone <repo-url>
 cd tasks-generator
-
-Install dependencies
+---
+## Install dependencies
 pip install -r requirements.txt
 
-Run the app
+## Run the app
 streamlit run app.py
 
-Known Limitations
+## Known Limitations
 Task reordering and grouping are manual (via editing text)
 No persistent database (session-based storage only)
 Minimal styling (focus on functionality and clarity)
 
 These choices were intentional due to time constraints
+
+## What Is Not Done (Yet)
+Authentication
+Multi-user persistence
+Advanced task management UI (drag & drop)
+Rich analytics or metrics
+
 
