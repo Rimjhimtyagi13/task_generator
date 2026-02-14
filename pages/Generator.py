@@ -15,7 +15,7 @@ def show_generator():
     st.title(" Generate Tasks")
     st.markdown("Fill in the details below to generate user stories and engineering tasks.")
 
-    # -------- FORM --------
+    #  FORM --
     with st.form("feature_form"):
         feature_goal = st.text_area(
             "Feature Goal *",
@@ -39,7 +39,7 @@ def show_generator():
 
         submitted = st.form_submit_button("Generate Tasks")
 
-    # -------- VALIDATION --------
+    #  VALIDATION ----
     if submitted:
         errors = []
 
